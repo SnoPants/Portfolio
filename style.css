@@ -7,26 +7,240 @@ body {
 }
 
 header {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   text-align: center;
   padding: 2rem;
   background-color: #1a1a1a;
+  position: relative; /* Needed for absolute positioning inside header */
+  font-size: 1.3rem;
+  font-weight: 1000; /* Thicker font weight */
+  letter-spacing: 0.02rem;
+}
+
+.back-button {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.5rem 1rem;      /* Aligns with header padding */
+  background-color: #222;
+  color: #00ffff;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+.back-button:hover {
+  background-color: rgb(152, 233, 91);
+  color: #222;
+}
+
+h1 {
+  font-size: 2.0rem;
+  color: #e0e0e0; /* Default color */
+  margin: 0;
+}
+
+h2 {
+  border-bottom: 0.1px solid #7c7c7c;
+  display: inline-block;
+}
+
+nav {
+  overflow: visible; /* Ensure scaling is not clipped */
 }
 
 nav a {
   margin: 0 1rem;
-  color: #0ff;
+  color: #0ff; /* Default color */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  color: rgb(152, 233, 91); /* Change color to lime green on hover */
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+.experience-grid {
+  display: flex; /* Use Flexbox to align cards horizontally */
+  gap: 1rem; /* Add space between the cards */
+  justify-content: center; /* Center the cards horizontally */
+  align-items: flex-start; /* Align cards to the top */
+  margin-top: 1rem; /* Add spacing above the grid */
+  margin-bottom: 1.5rem; /* Add spacing below the grid */
+  position: relative;
+}
+
+
+.card {
+  position: relative; /* Required for positioning the tooltip */
+  width: 250px; /* Set a fixed width for all cards */
+  aspect-ratio: 1/1; /* Maintain a 3:4 width-to-height ratio */
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  box-sizing: border-box; /* Include padding and border in the size */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  
+}
+
+.card img {
+  width: 100%; /* Make the image fill the card width */
+  height: auto; /* Maintain the image's aspect ratio */
+  max-height: 70%; /* Prevent the image from taking up too much space */
+  object-fit: contain; /* Ensure the image fits within the card */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-top: 0.5rem; /* Add spacing between the image and text */
+}
+
+.card:hover {
+  transform: scale(1.60); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  background-color: #2a2a2a; /* Optional: Change background color */
+  z-index: 10; /* Bring the hovered image to the front */
+}
+
+#about {
+  margin: 5.0rem auto; /* Adjust the top and bottom margins */
+  padding: 1rem; /* Optional: Adjust padding inside the section */
+  max-width: 900px; /* Optional: Limit the width of the content */
+  background-color: #1a1a1a;
+}
+
+.custom-link {
+  color: #00ffff;            /* Teal color */
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-size: 1.0rem;
+}
+
+.custom-link:hover {
+  color: rgb(152, 233, 91);            /* Lime green on hover */
   text-decoration: none;
 }
 
+#blog {
+  margin: 0.5rem auto; /* Adjust the top and bottom margins */
+  text-align: center;
+  max-width: 800px; /* Optional: Limit the width of the content */
+}
+
 section {
-  padding: 2rem;
-  border-bottom: 1px solid #333;
+  text-align: center;
+  font-size: 1.15rem;
+  padding: 4.2rem;
 }
 
 video {
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   display: block;
   margin: 1rem auto;
 }
+
+.video-caption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #bdbdbd;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.self-portrait {
+  width: 220px;
+  max-width: 100%;
+  height: 220px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  border-radius: 50%;     /* makes the image a circle */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: 1px solid #bdbdbd; /* Add a 5px teal border */
+}
+
+#gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  column-gap: 0.5rem; /* Space between columns */
+  row-gap: 0.2rem; /* Reduce the space between rows */
+  justify-content: center; /* Center the entire grid horizontally */
+  justify-items: center; /* Center items within their grid cells */
+  align-items: center; /* Center items vertically within their grid cells */
+  margin: 0 auto; /* Center the grid container itself */
+  padding: 1rem; /* Optional: Add padding around the gallery */
+  max-width: 700px; /* Optional: Limit the width of the content */
+}
+
+.gallery-img {
+  width: 230px; /* Set a fixed width */
+  height: 230px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image maintains its aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.gallery-img:hover {
+  transform: scale(2.05); /* slight zoom on hover */
+  object-fit: contain; /* Adjusts the image to fit within the container */
+  z-index: 10; /* Bring the hovered image to the front */
+}
+
+.image-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 equal columns */
+  column-gap: 1.5rem; /* Space between columns */
+  row-gap: 1.0rem; /* Reduce the space between rows */
+  justify-content: center; /* Center the entire grid horizontally */
+  justify-items: center; /* Center items within their grid cells */
+  align-items: center; /* Center items vertically within their grid cells */
+  margin: 0 auto; /* Center the grid container itself */
+  max-width: 1380px; /* Optional: Limit the width of the content */
+  margin-top: -6.0rem; /* Adjust the top margin to reduce space */
+}
+
+.image-row img {
+  position: relative;
+  object-fit: contain;
+  max-width: auto;      /* Allow images to use their intrinsic width */
+}
+
+footer {
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+

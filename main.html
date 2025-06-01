@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
+    <nav>
+      <a href="tech.html">Tech Art</a>
+      <a href="https://www.artstation.com/snopants" target="_blank">Art Station</a>
+    </nav>
+  </header>
+
+  <section id="demo">
+    <h1>Technical Animation Reel</h1>
+    <video controls src="assets/GitLFS/reels/ds_reel.mp4"></video>
+  </section>
+
+  <section>
+    <h2>Studio Experience</h2>
+    <div class="experience-grid">
+      <div class="card">
+        <a href="halo_exp.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/icons/halo_studios.png" alt="Halo Studios Logo" class="logo" />
+          <div class="card-text">December 2024 - Present</div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="shrapnel_exp.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/icons/shrapnel_orange.png" alt="Shrapnel Logo" class="logo" />
+          <div class="card-text">August 2023 - September 2024</div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="byu_exp.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/icons/byu_white.png" alt="BYU Logo" class="logo" />
+          <div class="card-text">January 2020 - May 2023</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="assets/icons/me.jpg" alt="self me" class="self-portrait" />
+    <p>My name is Andrew, and I’m a Technical Animator/Tech Artist. I’m always eager to explore new areas, particularly emerging technologies in the animation and game industry. I have extensive experience with Autodesk Maya and Unreal Engine, including managing and polishing character assets, debugging character systems, and optimizing characters for maximum performance in games. I also enjoy simplifying workflows with Python. In my free time, I like to model, animate, and draw. I’m resourceful and love tackling challenges head-on.
+​       Originally from Utah, I now reside in the greater Seattle area. I have a passion for art, playing sports, and board games. Snowboarding brings me peace, but spending quality time with my family is what makes me happiest.
+​       Thanks for visiting! Feel free to explore my portfolio or reach out if you’d like to connect!</p>
+    <h4>Resume</h4>
+    <a href="assets/files/resume_cv.pdf" class="custom-link" target="_blank">Download CV / Resume</a>
+  </section>
+
+  <section id="gallery">
+    <h2>Paintings & Drawings</h2>
+    <div id="gallery-container"></div>
+  </section>
+  
+  <script>
+    // Dynamically populate the gallery section
+    const galleryContainer = document.getElementById('gallery-container');
+    const imageFiles = [
+      "dave_east.jpeg",
+      "jocko.jpeg",
+      "evander.png",
+      "doc.png",
+      "atlas.jpg",
+      "method_man.png",
+      "tank.jpg",
+      "jeff_bridges.jpg",
+      "gary_oldman.jpg"
+    ];
+  
+    imageFiles.forEach(file => {
+      const link = document.createElement('a'); // Create a link element
+      link.href = `assets/art/${file}`; // Set the link to the image file
+      link.target = '_blank'; // Open the image in a new tab
+  
+      const img = document.createElement('img'); // Create an image element
+      img.src = `assets/art/${file}`;
+      img.alt = file.split('.')[0];
+      img.className = 'gallery-img';
+  
+      link.appendChild(img); // Nest the image inside the link
+      galleryContainer.appendChild(link); // Add the link to the gallery container
+    });
+  </script>
+
+  <footer>
+    <p>© 2025 Andrew De Spain</p>
+  </footer>
+</body>
+</html>
