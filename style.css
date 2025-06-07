@@ -202,8 +202,6 @@ video {
   padding: 1rem; /* Optional: Add padding around the gallery */
   max-width: 700px; /* Optional: Limit the width of the content */
   position: relative;  /* Important for z-index to behave correctly */
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  overflow-y: visible; /* Allow vertical flow if images expand */
 }
 
 .gallery-img {
