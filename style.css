@@ -15,6 +15,9 @@ header {
   font-size: 1.3rem;
   font-weight: 1000; /* Thicker font weight */
   letter-spacing: 0.02rem;
+  display: flex;             /* ✅ Add this */
+  flex-direction: column;    /* ✅ Stack vertically */
+  align-items: center;  
 }
 
 .back-button {
@@ -59,7 +62,11 @@ h2 {
 }
 
 nav {
-  overflow: visible; /* Ensure scaling is not clipped */
+  display: flex;
+  justify-content: center;   /* ✅ centers nav links horizontally */
+  flex-wrap: wrap;           /* ✅ allows wrapping on smaller screens */
+  gap: 1.5rem;               /* Optional: spacing between links */
+  margin-top: 1rem;          /* Space below logo if needed */
 }
 
 nav a {
@@ -72,6 +79,14 @@ nav a {
 nav a:hover {
   color: rgb(152, 233, 91); /* Change color to lime green on hover */
   transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 }
 
 .experience-grid {
