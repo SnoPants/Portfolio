@@ -201,6 +201,9 @@ video {
   margin: 0 auto; /* Center the grid container itself */
   padding: 1rem; /* Optional: Add padding around the gallery */
   max-width: 700px; /* Optional: Limit the width of the content */
+  position: relative;  /* Important for z-index to behave correctly */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: visible; /* Allow vertical flow if images expand */
 }
 
 .gallery-img {
@@ -216,6 +219,34 @@ video {
   object-fit: contain; /* Adjusts the image to fit within the container */
   z-index: 10; /* Bring the hovered image to the front */
 }
+
+@media (max-width: 768px) {
+  #gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    max-width: 100%;
+  }
+
+  .gallery-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.1); /* smaller zoom for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #gallery-container {
+    grid-template-columns: 1fr; /* stack vertically on small phones */
+  }
+
+  .gallery-img {
+    width: 90%;
+    height: auto;
+  }
+}
+
 
 .image-row {
   display: grid;
@@ -244,3 +275,20 @@ footer {
   color: #fff;
 }
 
+.video-wrapper {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;       /* or 360px or whatever size looks right */
+  margin: 0 auto;
+  position: relative;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
