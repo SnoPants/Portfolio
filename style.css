@@ -292,3 +292,17 @@ footer {
   top: 0;
   left: 0;
 }
+
+@media (max-width: 480px) {
+  .video-wrapper {
+    max-height: 220px; /* 🔧 Tweak this to your liking */
+    aspect-ratio: auto;
+  }
+
+  .video-wrapper iframe,
+  .video-wrapper video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
