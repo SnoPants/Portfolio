@@ -149,7 +149,7 @@ nav a:hover {
   color: #00ffff;            /* Teal color */
   text-decoration: underline;
   transition: color 0.2s;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
 }
 
 .custom-link:hover {
@@ -165,7 +165,7 @@ nav a:hover {
 
 section {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   padding: 4.2rem;
 }
 
@@ -387,5 +387,30 @@ footer {
     width: 100%;                 /* fill container width */
     height: auto;                /* maintain aspect ratio */
     max-width: 500px;            /* optional, stops extreme scaling */
+  }
+}
+
+.button {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  background-color: #222;
+  color: #00ffff;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: inline-block; /* makes it behave like a button */
+  text-decoration: none; /* remove underline for <a> */
+}
+.button:hover {
+  background-color: rgb(152, 233, 91);
+  color: #222;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .button {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 0.5em 1em; /* Adjust padding for smaller screens */
   }
 }
