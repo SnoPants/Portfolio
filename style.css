@@ -414,3 +414,29 @@ footer {
     padding: 0.5em 1em; /* Adjust padding for smaller screens */
   }
 }
+
+.collapsible-header {
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: -1rem;
+}
+
+/* Hover effect (desktop) */
+.collapsible-header:hover {
+  color: rgb(152, 233, 91); /* green */
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  max-width: 900px;    /* or whatever your main text sections use */
+  margin: 0 auto;      /* center horizontally */
+  padding: 1rem;       /* spacing on mobile */
+  line-height: 1.5;    /* optional for readability */
+}
+
+.collapsible-content.open {
+  max-height: 1000px; /* big enough to fit content */
+  transition: max-height 0.s ease-in;
+}

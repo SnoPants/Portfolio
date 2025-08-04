@@ -65,10 +65,12 @@
     <a href="assets/files/resume_cv2.pdf" class="button" target="_blank">Download CV / Resume</a>
   </section>
 
-  <section id="blog"> 
-      <h2>Paintings & Drawings</h2>
+  <section id="paintings-section">
+    <h4 id="paintings-toggle" class="collapsible-header">Additional Artwork</h4>
+    <div id="paintings-content" class="collapsible-content">
       <p>This section is included to showcase my artistic ability. While my portfolio primarily focuses on technical animation and rigging, I believe maintaining and improving my artistic skills enhances my overall technical artistry. This section is intended to complement—not distract from—the core of my work, demonstrating my ongoing commitment to creative growth.</p>
-    <div id="gallery-container"></div>
+      <div id="gallery-container"></div>
+    </div>
   </section>
 
   <script>
@@ -104,5 +106,20 @@
   <footer>
     <p>© 2025 Andrew De Spain</p>
   </footer>
+
+  <script>
+  const toggle = document.getElementById('paintings-toggle');
+  const content = document.getElementById('paintings-content');
+
+  toggle.addEventListener('click', () => {
+    content.classList.toggle('open');
+    toggle.textContent = content.classList.contains('open') 
+      ? '▼ Additional Artwork ▼' 
+      : 'Additional Artwork';
+  });
+
+  // existing gallery population script stays the same
+</script>
+
 </body>
 </html>
