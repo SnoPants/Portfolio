@@ -19,8 +19,12 @@
           <a href="byu_exp.html">BYU Experience</a>
         </div>
       </div>
-      <a href="tech.html">Tech Art</a>
-      <a href="https://www.artstation.com/snopants" target="_blank">Art Station</a>
+      <div class="dropdown">
+        <button class="dropbtn">GitHub</button>
+        <div class="dropdown-content">
+          <a href="https://github.com/SnoPants/ds_studio_pip/tree/main">DS Studio</a>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -47,18 +51,21 @@
         <a href="halo_exp.html" style="text-decoration: none; color: inherit;">
           <img src="assets/icons/halo_studios.png" alt="Halo Studios Logo" class="logo" />
           <div class="card-text">December 2024 - Present</div>
+          <div class="card-tooltip">(click to view experience)</div>
         </a>
       </div>
       <div class="card">
         <a href="shrapnel_exp.html" style="text-decoration: none; color: inherit;">
           <img src="assets/icons/shrapnel_orange.png" alt="Shrapnel Logo" class="logo" />
           <div class="card-text">August 2023 - September 2024</div>
+          <div class="card-tooltip">(click to view experience)</div>
         </a>
       </div>
       <div class="card">
         <a href="byu_exp.html" style="text-decoration: none; color: inherit;">
           <img src="assets/icons/byu_white.png" alt="BYU Logo" class="logo" />
           <div class="card-text">January 2020 - May 2023</div>
+          <div class="card-tooltip">(click to view experience)</div>
         </a>
       </div>
     </div>
@@ -66,9 +73,10 @@
   </section>
 
   <section id="paintings-section">
-    <h4 id="paintings-toggle" class="collapsible-header">Additional Artwork</h4>
-    <div id="paintings-content" class="collapsible-content">
-      <p>This section is included to showcase my artistic ability. While my portfolio primarily focuses on technical animation and rigging, I believe maintaining and improving my artistic skills enhances my overall technical artistry. This section is intended to complement—not distract from—the core of my work, demonstrating my ongoing commitment to creative growth.</p>
+    <h2>Additional Artwork</h2>
+      <section id="blurb">
+        <p>This section is included to showcase my artistic ability. While my portfolio primarily focuses on technical animation and rigging, I believe maintaining and improving my artistic skills enhances my overall technical artistry. This section is intended to complement—not distract from—the core of my work, demonstrating my ongoing commitment to creative growth.</p>
+      </section>
       <div id="gallery-container"></div>
     </div>
   </section>
@@ -104,22 +112,9 @@
   </script>
 
   <footer>
-    <p>© 2025 Andrew De Spain</p>
+    <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
+    <p>© 2026 Andrew De Spain</p>
   </footer>
-
-  <script>
-  const toggle = document.getElementById('paintings-toggle');
-  const content = document.getElementById('paintings-content');
-
-  toggle.addEventListener('click', () => {
-    content.classList.toggle('open');
-    toggle.textContent = content.classList.contains('open') 
-      ? '▼ Additional Artwork ▼' 
-      : 'Additional Artwork';
-  });
-
-  // existing gallery population script stays the same
-</script>
 
 </body>
 </html>

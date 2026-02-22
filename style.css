@@ -1,9 +1,21 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Rajdhani', sans-serif;
   background-color: #121212;
   color: #e0e0e0;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 header {
@@ -126,9 +138,15 @@ nav a:hover {
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #e0e0e0;
-  margin-top: 0.5rem; /* Add spacing between the image and text */
+  margin-top: 0.2rem; /* Add spacing between the image and text */
+}
+
+.card-tooltip {
+  font-size: 0.9rem;
+  color: #7e7e7e;
+  margin-top: 0.2rem; /* Add spacing between the image and text */
 }
 
 .card:hover {
@@ -143,6 +161,12 @@ nav a:hover {
   padding: 1rem; /* Optional: Adjust padding inside the section */
   max-width: 900px; /* Optional: Limit the width of the content */
   background-color: #1a1a1a;
+}
+
+#blurb {
+  margin: 0.0rem auto; /* Adjust the top and bottom margins */
+  padding: 1rem 0; /* Optional: Adjust padding inside the section */
+  max-width: 900px; /* Optional: Limit the width of the content */
 }
 
 .custom-link {
@@ -228,6 +252,7 @@ video {
 }
 
 .gallery-img:hover {
+  position: relative;
   transform: scale(2.05); /* slight zoom on hover */
   object-fit: contain; /* Adjusts the image to fit within the container */
   z-index: 12; /* Bring the hovered image to the front */
@@ -281,11 +306,17 @@ video {
 }
 
 footer {
-  margin: auto;
+  margin-top: auto;
   text-align: center;
-  padding: 1rem;
-  background-color: #1a1a1a;
-  color: #fff;
+  padding: 1rem 0;
+
+  color: #848484;
+}
+
+footer .logo {
+  width: 100px;          /* smaller logo */
+  height: auto;
+  filter: brightness(.4);
 }
 
 .video-wrapper {
