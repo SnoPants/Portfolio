@@ -29,7 +29,11 @@ header {
   letter-spacing: 0.02rem;
   display: flex;             /* ✅ Add this */
   flex-direction: column;    /* ✅ Stack vertically */
-  align-items: center;  
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Ensure it stays above other content */
+  backdrop-filter: blur(6px);  
 }
 
 .back-button {
