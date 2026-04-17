@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipeline & Scripting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      <button class="back-button" onclick="history.back()">← Back</button>
+      <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
+      <nav>
+        <a href="index.html">Main Menu</a>
+        <div class="dropdown">
+          <button class="dropbtn">Experience</button>
+          <div class="dropdown-content">
+            <a href="halo_exp.html">Halo Experience</a>
+            <a href="shrapnel_exp.html">Shrapnel Experience</a>
+            <a href="byu_exp.html">BYU Experience</a>
+          </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+            <a href="https://github.com/SnoPants/ds_studio_pip/tree/main">DS Studio</a>
+        </div>
+      </div>
+      </nav>
+    </header>
+
+    <section id="blog"  style="margin-top: -2.5rem">
+          <h2>Mesh Distributor</h2>
+          <p>
+            This tool was a prototype I developed using Python and PyQt to streamline the export of clothing assets for characters into Unreal Engine. At the time, one of the teams I was part of was building a character customization system with a large number of categorized clothing items. This was a proof of concept I created at home.
+          </p>
+          <p>
+            To manage this large volume of assets, I built a tool that automatically organizes and exports them based on user-defined mappings. The tool allows users to set up dynamic mappings for different clothing categories, such as shirts, pants, shoes, and really whatever the user needs. It then processes the assets in Maya, matches their names to the specified categories, and exports them into the correct folder structure for Unreal Engine.
+            This was an early prototype and proof of concept.
+          </p>
+
+
+    </section>
+
+    <section>
+          <div class="image-row">
+          <img src="assets/reference/tech/mesh_distributor2.png" alt="Tool Screenshot 1">
+          <img src="assets/reference/tech/mesh_distributor1.png" alt="Tool Screenshot 2">
+          </div>
+    </section>
+
+        <section id="blog">
+          <h2>Auto Rigger (Version 1.0)</h2>
+          <p>
+            This was an early version of an auto-rigging tool I developed toward the end of my time in college. It was built using Python and PyQt and was designed to automate some of the more tedious aspects of rigging, such as creating IK/FK controls and other limb systems.
+            This tool was my first initial foray into tool development and pipeline support, and it provided a valuable learning experience in Python, PyQt, linear algebra, and Maya modules. Looking back, I wish I had a stronger foundation in object-oriented programming so I could have built it with greater scalability and better integration into a personal pipeline. 
+            However, it was a great learning experience and a stepping stone toward more advanced tools I am currently developing.
+            Check out <a href="https://github.com/SnoPants/ds_studio_pip/tree/main" class="custom-link" target="_blank">DS Studio</a> for a more advanced, work-in-progress version of an auto-rigger and pipeline that I am currently developing.
+          </p>        
+    </section>
+
+    <section>
+          <div class="image-row">
+          <img src="assets/reference/tech/auto-rigger_curves.png" alt="Tool Screenshot 1">
+          <img src="assets/reference/tech/curves.gif" alt="Tool Screenshot 2">
+          <img src="assets/reference/tech/auto-rigger_ik_fk_ui.png" alt="Tool Screenshot 3">
+          <img src="assets/reference/tech/ik_fk.gif" alt="Tool Screenshot 4">
+          <img src="assets/reference/tech/auto-rigger_bendbows.png" alt="Tool Screenshot 5">
+          <img src="assets/reference/tech/bendbow.gif" alt="Tool Screenshot 6">
+          </div>
+    </section>
+</body>
