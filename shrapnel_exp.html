@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shrapnel Experience</title>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="CCBot" content="nofollow">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
 </head>
@@ -11,15 +13,15 @@
 <body>
     <header>
       <button class="back-button" onclick="history.back()">← Back</button>
-      <img src="assets/icons/ds_logo_white.png" alt="mainlogo" class="logo" style="width: 75px; height: auto;" />
-      <img src="assets/icons/shrapnel_orange.png" alt="shrapnel" class="logo" />
+      <img src="assets/icons/ds_logo_white.png" alt="Shrapnel" class="logo" style="width: 75px; height: auto;" />
+      <h2 class="header-studio-name">Neon Machine Inc.</h2>
       <nav>
-        <a href="index.html">Main Menu</a>
+        <a href="index.html">Home</a>
         <div class="dropdown">
           <button class="dropbtn">Experience</button>
           <div class="dropdown-content">
-            <a href="halo_exp.html">Halo Experience</a>
-            <a href="byu_exp.html">BYU Experience</a>
+            <a href="halo_exp.html">Halo Studios</a>
+            <a href="byu_exp.html">BYU</a>
           </div>
         </div>
       <div class="dropdown">
@@ -32,78 +34,60 @@
       </nav>
     </header>
 
-    <section class="blog">
-          <h1>Neon Machine - SHRPANEL</h1>
-          <p>
-            During my time at Neon Machine, I worked as a Character Technical Artist early on in its production of 
-            <em><strong>SHRAPNEL</strong></em>, a competitive, extraction-based first-person shooter built in Unreal Engine 5. 
-            I collaborated with the Character Lead and team to meet artistic and technical goals, managing and refining 
-            Metahuman-based assets, developing cloth simulation and character customization systems, and supporting R&amp;D efforts.
-          </p>
-          <p> 
-            <em>SHRAPNEL</em> was originally planned to be a crypto-based game, there were a lot of new things we had to learn as a studio. One of these things was how to work with NFTs and how to effectively market them. I found myself soon assisting UI/UX to render high-quality NFT weapon and character skins,  
-            in real-time presentations. I learned new ways how to render high-quality images and how to do it headless without opening Unreal Editor. Although, I was able not to finish this system, I was able to learn a lot about how to use Unreal Engine's rendering capabilities in new ways with using Movie Render Queue, Unreal's Python API,
-            and some of Unreal's Cvar system to control the quaility of renders.
-          </p>
-          <p>
-            <em>SHRAPNEL</em> gave me valuable insight into game production, asset management, and team collaboration. 
-            I gained experience converting animated Skeleteal Mesh vehicles into Nanite Static meshes based systems for performance - all the while preserving animations, optimizing Metahuman assets, 
-            and an intro into using Unreal Insights for profiling. This project strengthened my weight painting, scripting, and cross-team 
-            collaboration skills while deepening my understanding of scalable asset workflows for high-quality game production. 
-          </p>
-          <p>
-            Unfortunately, I did not get to be part of the team for the entire production of Shrapnel, but I am grateful for the people I worked with and the experience I gained during my time there.
-          </p>
-    </section>
-
-    <section id="gallery">
-    <h2>Work Example Gallery</h2>
-    <div id="gallery-container"></div>
-    <div class="video-caption"><p>Responsible for all character skinning, character integration, some vheicle integration, cloth sims, renderings, and optimizations.
-    </p>
-    <p>[Character Lead - Brice Broaddus] [Weapons Lead - Tanner Ellison] [Enviorment Lead - Sherif Habashi] [Hard Surface Artist, Enviorment Artist - Danny Rodriguez]</p> 
-    <p>[Character Artists - Sergei Matveenkov, Pedro Varella, and Abraham Tovmasyan]</p>
-    </section>
-
-    </section>
-    <section id="shrapnel_trailer">
-      <h2>SHRAPNEL Cinematic Trailer</h2>
+    <section class ="blog">
+      <img src="assets/icons/shrapnel_orange.png" alt="SHRAPNEL" class="exp_logo" />
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/buVwtknco-Q?si=hfJ6eObL3u3ZmqdW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
+
       <div class="video-caption">SHRAPNEL Cinematic Trailer - I was not involved in the production of this trailer.</div>
+
+      <p id="about">
+        During my time at Neon Machine Inc., I worked as a Character Technical Artist. I collaborated with the Character Lead on character systems, technical animation workflows, and supporting integration of characters For more detailed information about my specific contributions, please check out the <a href="shrapnel_breakdown.html" class="custom-link">Breakdown</a> page.
+      </p>
     </section>
 
     <script>
-    // Dynamically populate the gallery section
-    const galleryContainer = document.getElementById('gallery-container');
-    const imageFiles = [
-      "shrapnel_alek.png",
-      "shrapnel_repairdrone.jpg",
-      "shrapnel_phantom.png",
-      "shrapnel_screenshot1.png",
-      "shrapnel_smg.jpg",
-      "shrapnel_screenshot2.png",
-    ];
-  
-    imageFiles.forEach(file => {
-      const link = document.createElement('a'); // Create a link element
-      link.href = `assets/reference/${file}`; // Set the link to the image file
-      link.target = '_blank'; // Open the image in a new tab
-  
-      const img = document.createElement('img'); // Create an image element
-      img.src = `assets/reference/${file}`;
-      img.alt = file.split('.')[0];
-      img.className = 'gallery-img';
-  
-      link.appendChild(img); // Nest the image inside the link
-      galleryContainer.appendChild(link); // Add the link to the gallery container
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    
+    // optional: close with Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
     });
-    </script>
+  </script>
+
+  <script>
+    const header = document.querySelector('header');
+    const fadeStart = 100;
+    const fadeEnd = 400;
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > fadeStart) {
+        let fadeProgress = (scrollTop - fadeStart) / (fadeEnd - fadeStart);
+        fadeProgress = Math.min(fadeProgress, 1);
+        header.style.opacity = 1 - fadeProgress;
+      } else {
+        header.style.opacity = 1;
+      }
+    });
+  </script>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
   <footer>
     <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
-    <p>© 2026 Andrew De Spain</p>
+    <p>© 2026 DS Studio</p>
   </footer>
 </body>
 </html>

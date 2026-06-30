@@ -4,22 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Halo Experience</title>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="CCBot" content="nofollow">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
 </head>
-// HALO STUDIOS
+
 <body>
     <header>
       <button class="back-button" onclick="history.back()">← Back</button>
       <img src="assets/icons/ds_logo_white.png" alt="Experience1" class="logo" style="width: 75px; height: auto;" />
-      <img src="assets/icons/halo_studios.png" alt="My Demo Reel" class="logo" />
+      <img src="assets/icons/halo_studios.png" alt="Halo Studios" class="logo" />
       <nav>
-        <a href="index.html">Main Menu</a>
+        <a href="index.html">Home</a>
         <div class="dropdown">
           <button class="dropbtn">Experience</button>
           <div class="dropdown-content">
-            <a href="shrapnel_exp.html">Shrapnel Experience</a>
-            <a href="byu_exp.html">BYU Experience</a>
+            <a href="shrapnel_exp.html">Neon Machine</a>
+            <a href="byu_exp.html">BYU</a>
           </div>
         </div>
         <div class="dropdown">
@@ -32,32 +34,42 @@
       </nav>
     </header>
 
-    <section class = "blog">
-      <h1>Halo Campaign Evolved</h1>
-      <p>
-        Currently, I have the privilege of working at Halo Studios as a Technical Artist focused on character and vehicle integration within a stitched Unreal Engine pipeline. 
-        My work spans rigging, physics setup, gameplay asset integration, and tool development. I collaborate closely with modeling, animation, game design, and FX teams to ensure 
-        assets function reliably and meet both visual fidelity and gameplay needs.
-      </p>
-      <p>
-        Every day, I continue to learn more about Unreal Engine, Halo’s proprietary engine, and how to improve workflows within a stitched engine environment. Much of my work has involved 
-        identifying engine implementation requirements and determining what is needed to successfully bring assets into the game. The challenges of working within a stitched engine pipeline have been significant, 
-        but they have also provided invaluable experience in problem-solving, cross-disciplinary collaboration, clear communication, adaptability, and planning.
-      </p>
-      <p>
-       I look forward to continuing to learn and sharing more in the near future.
-      </p>
-
+    <section class ="blog">
+      <img src="assets/icons/halo_logo.png" alt="Halo Campaign Evolved" class="exp_logo" />
       <div class="video-wrapper">
-        <iframe width="1840" height="1035" src="https://www.youtube.com/embed/hSjbIM0iegY" title="Halo: Campaign Evolved | The Silent Cartographer – 13 Minute Gameplay Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="1840" height="1035" src="https://www.youtube.com/embed/0MxBFXH2a_U?si=vAUjSLaIIyq2-mHA" title="Halo: Campaign Evolved | Story Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <p>
-        Visit the <a href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/" class="custom-link" target="_blank">Steam Page</a> to learn more about the project I’m currently involved in.
+
+      <div class="video-caption">Visit the <a href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/" class="custom-link" target="_blank" style="font-size: 0.9rem;">Steam Page</a> to learn more about the project I’m currently involved in.</div>
+
+      <p id="about">
+        Halo: Campaign Evolved was my first project at Halo Studios. I contributed to technical animation and character systems on a modern reimagining of a classic title. For more detailed information about my specific contributions, please check out the <a href="halo_breakdown.html" class="custom-link">Breakdown</a> page.
       </p>
     </section>
 
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    
+    // optional: close with Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+
   <footer>
     <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
-    <p>© 2026 Andrew De Spain</p>
+    <p>© 2026 DS Studio</p>
   </footer>
     

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DS Home</title>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="CCBot" content="nofollow">
   <link rel="stylesheet" href="style.css?v=2" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
 </head>
@@ -14,9 +16,9 @@
       <div class="dropdown">
         <button class="dropbtn">Experience</button>
         <div class="dropdown-content">
-          <a href="halo_exp.html">Halo Experience</a>
-          <a href="shrapnel_exp.html">Shrapnel Experience</a>
-          <a href="byu_exp.html">BYU Experience</a>
+          <a href="halo_exp.html">Halo Studios</a>
+          <a href="shrapnel_exp.html">Neon Machine</a>
+          <a href="byu_exp.html">BYU</a>
         </div>
       </div>
       <div class="dropdown">
@@ -30,25 +32,29 @@
   </header>
 
   <section id="demo">
-    <h1>Technical Reel</h1>
+    <h1>Technical Demo Reel</h1>
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/a1xoaC42c4g?si=lxwT65SN1UAmbKB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <iframe
+      width="100%"
+      height="600"
+      src="https://www.youtube.com/embed/edTW2b1QSmM"
+      title="Technical Demo Reel"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+</div>
     <div class="video-caption">My current demo reel. This showcases my technical experience with character integration and animation workflows.</div>
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
-    <img src="assets/icons/me.jpg" alt="self me" class="self-portrait" />
-    <p>My name is Andrew, and I’m a Technical Animator/Artist. I’m always eager to explore new areas, particularly emerging technologies in the animation and game industry. I have a strong and 
-      continually expanding technical foundation 
-      in Autodesk Maya and Unreal Engine, along with experience working in proprietary game engines and a solid working knowledge of other 3D content creation packages. 
-       I work to maintain a solid working proficiency in Python, applying it to tool development, workflow automation, and pipeline support. I’m adaptable, resourceful, love tackling 
-       challenges, and learning new skills.
+    <img src="assets/icons/ds_logo_white.png" alt="DS Logo" style="width: 150px; max-width: 100%; height: auto; display: block; margin: 1rem auto; padding: 1rem 0; filter: brightness(.4);" />
+    <p>I'm a Technical Animator/Artist with a strong technical foundation in Autodesk Maya and Unreal Engine, as well as experience with other 3D software, and a passion for learning new tools and workflows. 
+      I'm excited about emerging technologies in the animation and game industry, including AI and its applications in technical art. I maintain strong proficiency in Python for tool development, workflow automation, 
+      and pipeline support. I'm adaptable, resourceful, and continuously seek opportunities to learn new skills and solve challenging technical problems.
     </p>
-    <p>
-​       I am Originally from Utah, I now reside in the greater Seattle area. I have a passion for technical art, art, playing sports, and board games. Snowboarding brings me peace, but spending quality time with my family is what makes me happiest.
-​       Thanks for visiting! Feel free to explore my portfolio or reach out if you’d like to connect!
+    <p>I have a passion for art, playing sports, playing video games, and Magic the Gathering. Thanks for visiting! Feel free to explore my portfolio or reach out if you'd like to connect!
     </p>
   </section>
 
@@ -86,11 +92,10 @@
         <p>This section is included to showcase my artistic ability. While my portfolio primarily focuses on technical ability, I believe maintaining and improving my artistic skills enhances my overall technical artistry. This section is intended to complement and to not distract from the core of my work, demonstrating my ongoing commitment to creative growth.</p>
       </section>
       <div id="gallery-container"></div>
-    </div>
   </section>
 
   <script>
-    // Dynamically populate the gallery section////
+    // Dynamically populate the gallery section/////
     const galleryContainer = document.getElementById('gallery-container');
     const imageFiles = [
       "dave_east.jpeg",
@@ -106,12 +111,11 @@
   
     imageFiles.forEach(file => {
       const link = document.createElement('a'); // Create a link element
-      link.href = `assets/art/${file}`; // Set the link to the image file
-      link.target = '_blank'; // Open the image in a new tab
+
   
       const img = document.createElement('img'); // Create an image element
       img.src = `assets/art/${file}`;
-      img.alt = file.split('.')[0];
+      img.onclick = () => openLightbox(`assets/art/${file}`);
       img.className = 'gallery-img';
   
       link.appendChild(img); // Nest the image inside the link
@@ -119,9 +123,47 @@
     });
   </script>
 
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    
+    // optional: close with Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+  <script>
+    const header = document.querySelector('header');
+    const fadeStart = 100;
+    const fadeEnd = 400;
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > fadeStart) {
+        let fadeProgress = (scrollTop - fadeStart) / (fadeEnd - fadeStart);
+        fadeProgress = Math.min(fadeProgress, 1);
+        header.style.opacity = 1 - fadeProgress;
+      } else {
+        header.style.opacity = 1;
+      }
+    });
+  </script>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
   <footer>
     <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
-    <p>© 2026 Andrew De Spain</p>
+    <p>© 2026 DS Studio</p>
   </footer>
 
 </body>

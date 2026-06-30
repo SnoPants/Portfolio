@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo Experience</title>
+  <meta name="robots" content="noai, noimageai">
+  <meta name="CCBot" content="nofollow">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+      <button class="back-button" onclick="history.back()">← Back</button>
+      <img src="assets/icons/ds_logo_white.png" alt="Experience1" class="logo" style="width: 75px; height: auto;" />
+      <img src="assets/icons/halo_studios.png" alt="Halo Studios" class="logo" />
+      <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">Experience</button>
+          <div class="dropdown-content">
+            <a href="shrapnel_exp.html">Neon Machine</a>
+            <a href="byu_exp.html">BYU</a>
+          </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+          <div class="dropdown-content">
+            <a href ="pipeline_scripting.html">Pipeline & Scripting</a>
+            <a href="https://github.com/SnoPants/ds_studio_pip/tree/main">DS Studio</a>
+        </div>
+      </div>
+      </nav>
+    </header>
+
+    <section class ="blog">
+      <img src="assets/icons/halo_logo.png" alt="Halo Campaign Evolved" class="exp_logo" />
+      <div class="video-wrapper">
+        <iframe width="1840" height="1035" src="https://www.youtube.com/embed/0MxBFXH2a_U?si=vAUjSLaIIyq2-mHA" title="Halo: Campaign Evolved | Story Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="video-caption">Visit the <a href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/" class="custom-link" target="_blank" style="font-size: 0.9rem;">Steam Page</a> to learn more about the project I’m currently involved in.</div>
+
+      <p id="about">
+        Halo: Campaign Evolved was my first project at Halo Studios and is considered a remake of the original Halo: Combat Evolved. The idea was to stay as close as possible to what the original game felt like, but with a modern 
+        look. This was done using a hybrid engine built on Halo's original systems - combined with Unreal Engine 5.
+      </p>
+
+      <div class="description-section">
+      <h2>Character & Vehicle Integration</h2>
+      <p>
+      Integrating characters and vehicles was one of my main responsibilities on this project. This included preparing or managing rigs and skeletons, authoring physics/collision meshes, retargeting animations, initial game-design tuning, proper IK to weapon/ground functionality,
+      and more. The complexity of the integration varied but there was always a lot to keep track of. Because of the complexity of the integration, there was much back and forth between the design teams for functionality,
+      the art teams for visual fidelity, and engineering for technical implementation to ensure the assets were working properly and meeting the needs of the game.
+      </p>
+      </div>
+      
+      <div class="video-wrapper">
+      <iframe
+        width="100%"
+        height="600"
+        src="https://www.youtube.com/embed/w0aCrlBwg-k?si=NeWqaos0ZlwydK3g"
+        title="Character & Vehicle Reel"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      </div>
+
+      <div class="tech-section">
+        <h3>Rigging & Integration</h3>
+        <p>
+          I had the opportunity to rig the Warthog and perform the initial integration of the asset into the game at the beginning of this project. 
+          I was also tasked with the initial vehicle tuning for an Xbox leadership demo, despite having no prior experience with vehicle tuning. 
+          Through a lot of research, testing, and iteration, I was able to get it functioning similarly to the original Halo: Combat Evolved Warthog, and it was well received during the demo.
+        </p>
+        <p>
+          This experience provided a great opportunity to improve my mechanical rigging skills and gain a deeper understanding of how Havok's vehicle and physics systems work. 
+          The model was created by Dan Sarkar.
+        </p>
+        <p>
+          Looking back, there are several things I could have done better. I should have been more thorough in understanding the standards and conventions for naming, organizing, and structuring the rig. 
+          There are also some fidelity improvements I would have approached differently if I had more time, such has secondary animation on the antenna with UE's anim dynamics, adding some controlability on the mirrors and some other doodads on the rig. 
+          Overall, though, I think the project turned out well and was a valuable learning experience.
+        </p>
+      <div class="video-wrapper">
+      <iframe
+        width="100%"
+        height="600"
+        src="https://www.youtube.com/embed/78cAn5540aY?si=b_GjyrR7xU3q6-Ds"
+        title="Warthog Reel"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      </div>
+    </div>
+
+    <div class="tech-section">
+      <h3>Data Archaeology</h3>
+      <p>
+        A significant amount of my work on this project involved what I would call "data archaeology"—the process of digging through old data of older assets from the past halo games. This mainly included searching through legacy animation files, 
+        transferring, and retargeting these to newer skeletons. The animations ranged
+        anywhere from 15 to over 2,000 animations per asset, 
+        all of which required a specific set of rules to be followed to ensure they worked properly in-game.
+      </p>
+      <p>
+        I created personal tools and scripts to help ease this process by identifying which animations were needed and retargeting them in bulk. Unfortunately, with not a ton of time to expand on these tools, they were very much a one-off
+        solutions and would never be scalable enough to be used by a larger team, but they worked well as proof-of-concept and I importantly learned the value of batch-processing. This is definenitely a tool I would like to expand on in the future.
+      </p>
+    </div>
+    </section>
+
+    <section class ="blog">
+      <h2>Damage & Destruction Integration</h2>
+      <p>
+        Another aspect of my work on this project was integrating the damage and destruction systems for vehicles. This included authoring collision meshes, physics meshes, and working with design to make sure weakspots were properly defined and the damage felt right.
+        The damage system consists of levels of damage affecting the vehicle's performance and appearance. I had to ensure that the damage meshes were properly set up to reflect these changes in-game.
+      </p>
+      <div class="video-wrapper">
+      <iframe
+        width="100%"
+        height="600"
+        src="https://www.youtube.com/embed/4Ozhd7uIU_M?si=5FX3ZIEiNFX4Ybff"
+        title="Damage Reel"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+      </div>
+
+      <p>
+        <img class="description-img" src="assets\breakdowns\halo\damage_breakdown.png" alt="damage breakdown" onclick="openLightbox('assets/breakdowns/halo/damage_breakdown.png')" />
+      </p>
+    </section>
+
+    <section section id="about" style="margin-bottom: 80px;">
+      <div class="description-section">
+      <p>
+        Currently, I have the privilege of working at Halo Studios as a Technical Artist focused on character and vehicle integration within a properitery and Unreal stitched engine. 
+        My work spans rigging, physics setup, gameplay asset integration, and tool development. I work closely with modeling, animation, game design, and FX teams to ensure 
+        assets function reliably and meet both visual fidelity and gameplay needs.
+      </p>
+      </div>
+    </section>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    
+    // optional: close with Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+  <script>
+    const header = document.querySelector('header');
+    const fadeStart = 100;
+    const fadeEnd = 400;
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > fadeStart) {
+        let fadeProgress = (scrollTop - fadeStart) / (fadeEnd - fadeStart);
+        fadeProgress = Math.min(fadeProgress, 1);
+        header.style.opacity = 1 - fadeProgress;
+      } else {
+        header.style.opacity = 1;
+      }
+    });
+  </script>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+
+  <footer>
+    <img src="assets/icons/ds_logo_white.png" alt="My Demo Reel" class="logo" />
+    <p>© 2026 DS Studio</p>
+  </footer>
+    
