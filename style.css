@@ -472,6 +472,29 @@ footer .logo {
   filter: brightness(.4);
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.social-links a {
+  color: #848484;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: rgb(152, 233, 91);
+  transform: scale(1.15);
+}
+
+footer .social-links a {
+  font-size: 1.3rem;
+}
+
 .video-wrapper {
   width: 100%;
   max-width: 800px;
